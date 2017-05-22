@@ -1,0 +1,17 @@
+<h1>Answer from the Coach</h1>
+<div>
+  <h3><%= @question %></h3>
+  <p>- You</p>
+</div>
+<div>
+  <h3>
+  <% if @question.include? '?' %>
+    <%= "Don't ask me bruv" %>
+  <% else %>
+    <%= "Shut up and work" %>
+  <% end %>
+  </h3>
+  <p>- Your Coach</p>
+</div>
+
+<%= link_to "New question", ask_path, class: "btn" %>
